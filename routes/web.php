@@ -15,18 +15,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('stock', 'StockController');
-Route::resource('plan', 'PlanController');
-Route::resource('project', 'ProjectController');
-Route::resource('suplier', 'SuplierController');
-Route::resource('supliers', 'SupplierReadController');
-Route::resource('stockToko', 'StockTokoController');
-Route::resource('report', 'ReportController');
-Route::resource('pesanan', 'PesananController');
-Route::resource('report-plan', 'ReportPlanController');
-Route::resource('order', 'OrderController');
+Route::group(['middleware' => 'auth'], function () {
 
 
+    Route::resource('stock', 'StockController');
+    Route::resource('plan', 'PlanController');
+    Route::resource('project', 'ProjectController');
+    Route::resource('supliers', 'SupplierReadController');
+    Route::resource('report-plan', 'ReportPlanController');
+    Route::resource('pesanan', 'PesananController');
+    Route::resource('history', 'HistoryController');
+    Route::resource('stok', 'StockStakeController');
+
+
+
+    Route::resource('report', 'ReportController');
+    Route::resource('stockToko', 'StockTokoController');
+    Route::resource('suplier', 'SuplierController');
+    Route::resource('order', 'OrderController');
+});
 
 Auth::routes();
 
