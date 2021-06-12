@@ -18,6 +18,8 @@ class CreatePesanansTable extends Migration
             $table->string('nama_bahan');
             $table->integer('jumlah_bahan');
             $table->integer('harga_satuan');
+            $table->string('status_pembayaran');
+            $table->string('status_pesanan');
             $table->timestamps();
         });
     }

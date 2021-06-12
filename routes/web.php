@@ -26,6 +26,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('pesanan', 'PesananController');
     Route::resource('history', 'HistoryController');
     Route::resource('stok', 'StockStakeController');
+    Route::resource('report-supp', 'ReportSuppController');
+    Route::resource('status', 'StatusController');
+
+
 
 
 

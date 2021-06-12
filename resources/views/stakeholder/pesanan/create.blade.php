@@ -20,6 +20,9 @@
                         <label>Harga Satuan</label>
                         <input type="number" class="form-control" name="harga_satuan" required="">
                     </div>
+                    <input type="hidden" name="status_pembayaran" value="belum dibayar">
+                    <input type="hidden" name="status_pesanan" value="Sedang di Proses">
+
                 </div>
                 <div class="card-footer text-right">
                     <a href="{{ route('pesanan.index') }}" class="btn btn-warning">Kembali</a>

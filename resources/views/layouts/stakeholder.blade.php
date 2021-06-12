@@ -61,6 +61,7 @@
                                 <li><a class="nav-link" href="{{ route('pesanan.index') }}">Data Pesanan</a></li>
                                 <li><a class="nav-link" href="{{ route('report-plan.index') }}">Data Laporan Perencanaan Pemesanan</a></li>
                                 <li><a class="nav-link" href="{{ route('stok.index') }}">Data Stok Pembangunan</a></li>
+                                <li><a class="nav-link" href="{{ route('report-supp.index') }}">Data Laporan Supplier</a></li>
                             </ul>
                         </li>
                     </ul>

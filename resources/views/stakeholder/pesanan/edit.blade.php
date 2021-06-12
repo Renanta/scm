@@ -21,6 +21,8 @@
                         <label>Harga Satuan</label>
                         <input type="number" class="form-control" name="harga_satuan" required="" value="{{ $data -> harga_satuan}}">
                     </div>
+                    <input type="hidden" name="status_pembayaran" value="{{ $data -> status_pembayaran}}">
+                    <input type="hidden" name="status_pesanan" value="{{ $data -> status_pesanan}}">
                 </div>
                 <div class=" card-footer text-right">
                     <a href="{{ route('pesanan.index') }}" class="btn btn-warning">Kembali</a>

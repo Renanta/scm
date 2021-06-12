@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Pesanan;
 use Illuminate\Http\Request;
 
-class PesananController extends Controller
+class StatusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class PesananController extends Controller
     public function index()
     {
         $data = Pesanan::all();
-        return view('stakeholder.pesanan.index', compact('data'));
+        return view('suplier.status.index', compact('data'));
     }
 
     /**
@@ -25,7 +25,6 @@ class PesananController extends Controller
      */
     public function create()
     {
-        return view('stakeholder.pesanan.create');
     }
 
     /**
@@ -36,17 +35,6 @@ class PesananController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'nama_bahan' => 'required',
-            'jumlah_bahan' => 'required',
-            'harga_satuan' => 'required',
-            'status_pembayaran' => 'required',
-            'status_pesanan' => 'required'
-        ]);
-
-        Pesanan::create($data);
-
-        return redirect(route('pesanan.index'))->with('message', 'Success entry new data!');
     }
 
     /**
@@ -69,7 +57,7 @@ class PesananController extends Controller
     public function edit($id)
     {
         $data = Pesanan::findOrFail($id);
-        return  view('stakeholder.pesanan.edit', compact('data'));
+        return  view('suplier.status.edit', compact('data'));
     }
 
     /**
@@ -90,7 +78,7 @@ class PesananController extends Controller
         ]);
         Pesanan::find($id)->update($data);
 
-        return redirect(route('pesanan.index'))->with('message', 'Berhasil Menyunting Data');
+        return redirect(route('status.index'))->with('message', 'Berhasil Menyunting Data');
     }
 
     /**
@@ -101,7 +89,6 @@ class PesananController extends Controller
      */
     public function destroy($id)
     {
-        Pesanan::find($id)->delete();
-        return redirect(route('pesanan.index'))->with('message', 'Berhasil Menghapus Data');
+        //
     }
 }

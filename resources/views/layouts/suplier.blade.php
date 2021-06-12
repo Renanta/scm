@@ -62,6 +62,7 @@
                                 <li><a class="nav-link" href="{{ route('stockToko.index')}}">Data stok toko</a></li>
                                 <li><a class="nav-link" href="{{ route('order.index')}}">Data pesanan</a></li>
                                 <li><a class="nav-link" href="{{ route('report.index')}}">Laporan hasil pemesanan</a></li>
+                                <li><a class="nav-link" href="{{ route('status.index')}}">Status Pesanan</a></li>
                             </ul>
                         </li>
                     </ul>
